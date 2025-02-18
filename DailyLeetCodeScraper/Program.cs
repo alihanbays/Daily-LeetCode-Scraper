@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.Net;
+using DailyLeetCodeScraper.Modal;
 using HtmlAgilityPack;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -14,8 +15,8 @@ class Program
     {
         try 
         {
-            LeetCodeScraper leetCodeScraper = new LeetCodeScraper();
-            var result = leetCodeScraper.GetDailyQuesiton();
+            LeetCodeScraper leetCodeScraper = new();
+            Question res = leetCodeScraper.GetDailyQuesiton();
             
         }
         catch (Exception e) 

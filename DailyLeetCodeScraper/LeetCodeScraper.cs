@@ -6,13 +6,15 @@ namespace DailyLeetCodeScraper;
 
 public class LeetCodeScraper 
 {
-    public QuestionModal GetDailyQuesiton() 
+    private const string Url = "https://leetcodepotd.vercel.app/";
+
+    public Question GetDailyQuesiton()
     {
-        var htmlDoc = new HtmlWeb().Load("https://leetcodepotd.vercel.app/");
-        var title = htmlDoc.QuerySelectorAll("div");
+        HtmlDocument? htmlDocument = new HtmlWeb().Load(Url);
+        IList<HtmlNode>? title = htmlDocument.QuerySelectorAll("div");
         
         Console.WriteLine(title);
         
-        return new QuestionModal();    
+        return new Question();    
     }
 }
