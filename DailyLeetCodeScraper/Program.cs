@@ -17,7 +17,8 @@ class Program
         {
             LeetCodeScraper leetCodeScraper = new();
             Question res = leetCodeScraper.GetDailyQuesiton();
-            
+            EmailUtils emailUtils = new();
+            emailUtils.SendMailAsync(res).Wait();
         }
         catch (Exception e) 
         {
