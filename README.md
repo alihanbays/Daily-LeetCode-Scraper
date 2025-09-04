@@ -48,7 +48,7 @@ On execution, the scraper will:
 
 ### 5. Automate It
 To make it run every day automatically:
-- **Linux/Mac:** Add a cron job.  
+- **Linux:** Add a cron job (I am running it on my RasberryPie).
 - **Windows:** Use Task Scheduler.  
 
 ---
